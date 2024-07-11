@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./exercises.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Exercises Without Equipment</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <a href="./index.html"> <img src="logo-removebg-preview.png" class="logo" alt="" width="200" height="100"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="./food.html">FOOD</a></li>
+                <li><a href="./diet.html">DIET</a></li>
+                <li><a href="exercise.html">EXERCISES</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Exercises Without Equipment</h2>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openExercise(event, 'WeightLoss')" id="defaultOpen">Weight Loss</button>
+        <button class="tablinks" onclick="openExercise(event, 'WeightGain')">Weight Gain</button>
+        <button class="tablinks" onclick="openExercise(event, 'MaintainWeight')">Maintain Weight</button>
+    </div>
+
+    <div id="WeightLoss" class="tabcontent">
+        <h3>Weight Loss Exercises</h3>
+        <ul>
+            <li>
+                Jumping Jacks
+                <video width="320" height="240" controls>
+                    <source src="videos/jumping_jacks.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                High Knees
+                <video width="320" height="240" controls>
+                    <source src="videos/high_knees.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Burpees
+                <video width="320" height="240" controls>
+                    <source src="videos/burpees.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Mountain Climbers
+                <video width="320" height="240" controls>
+                    <source src="videos/mountain_climbers.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Squat Jumps
+                <video width="320" height="240" controls>
+                    <source src="videos/squat_jumps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+        </ul>
+    </div>
+
+    <div id="WeightGain" class="tabcontent">
+        <h3>Weight Gain Exercises</h3>
+        <ul>
+            <li>
+                Push-ups
+                <video width="320" height="240" controls>
+                    <source src="videos/push_ups.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Bodyweight Squats
+                <video width="320" height="240" controls>
+                    <source src="videos/bodyweight_squats.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Lunges
+                <video width="320" height="240" controls>
+                    <source src="videos/lunges.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Dips
+                <video width="320" height="240" controls>
+                    <source src="videos/dips.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Pull-ups
+                <video width="320" height="240" controls>
+                    <source src="videos/pull_ups.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+        </ul>
+    </div>
+
+    <div id="MaintainWeight" class="tabcontent">
+        <h3>Maintain Weight Exercises</h3>
+        <ul>
+            <li>
+                Plank
+                <video width="320" height="240" controls>
+                    <source src="videos/plank.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Bicycle Crunches
+                <video width="320" height="240" controls>
+                    <source src="videos/bicycle_crunches.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Leg Raises
+                <video width="320" height="240" controls>
+                    <source src="videos/leg_raises.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Side Plank
+                <video width="320" height="240" controls>
+                    <source src="videos/side_plank.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+            <li>
+                Glute Bridges
+                <video width="320" height="240" controls>
+                    <source src="videos/glute_bridges.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function openExercise(evt, exerciseType) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(exerciseType).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
